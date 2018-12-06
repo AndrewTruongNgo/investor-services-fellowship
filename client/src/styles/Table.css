@@ -13,11 +13,14 @@
 
 .display-button {
   background: black;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: black;
   border-radius: 3px;
-  border: 2px solid black;
+  border: 2px solid #2A5BFE;
   color: white;
   padding: 0.25em 1em;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 14px;
-
+  font-size: 18px;
+  width: 167px;
+  height: 40px;
+  font-weight: 200;
 }

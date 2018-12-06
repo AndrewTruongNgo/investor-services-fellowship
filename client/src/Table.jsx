@@ -6,7 +6,7 @@ class Table extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: true
+      display: true,
     };
     this.displayButton = this.displayButton.bind(this);
   }
@@ -40,41 +40,41 @@ class Table extends React.Component {
                 <td>
                   {inv.name}
                 </td>
-                <td></td>
-                <td></td>
+                <td />
+                <td />
                 <td>{inv.quantity}</td>
                 <td>${inv.cost.$}</td>
               </tr>
-              {display &&
+              {display && (
                 <tr>
-                  <td></td>
+                  <td />
                   <td>
                     {inv.issued_assets.map(asset => (
-                      <div>{asset.asset_class}</div>
+                      <div key={asset.id}>{asset.asset_class}</div>
                     ))}
                   </td>
                   <td>
                     {inv.issued_assets.map(asset => (
-                      <div>{asset.investment_date}</div>
+                      <div key={asset.id}>{asset.investment_date}</div>
                     ))}
                   </td>
                   <td>
                     {inv.issued_assets.map(asset => (
-                      <div>{asset.quantity}</div>
+                      <div key={asset.id}>{asset.quantity}</div>
                     ))}
                   </td>
                   <td>
                     {inv.issued_assets.map(asset => (
-                      <div>${asset.cost.$}</div>
+                      <div key={asset.id}>${asset.cost.$}</div>
                     ))}
                   </td>
                 </tr>
-              }
+              )}
             </tbody>
           ))}
         </table>
-        <br/>
-        <br/>
+        <br />
+        <br />
         {display ? (
           <button className="display-button" onClick={this.displayButton}>Collapse All</button>
         ) : (
