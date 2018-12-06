@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Table from './Table.jsx'
-
+import styles from './styles/App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <h2>Krakatoa Ventures Fund I, L.P.</h2>
+        <h2 id="title">Krakatoa Ventures Fund I, L.P.</h2>
         <Table investments={data} />
       </div>
     );

@@ -1,0 +1,23 @@
+.table-header {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+.table-body {
+  font-size: 16px;
+  font-weight: 100;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.display-button {
+  background: black;
+  border-radius: 3px;
+  border: 2px solid black;
+  color: white;
+  padding: 0.25em 1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+
+}

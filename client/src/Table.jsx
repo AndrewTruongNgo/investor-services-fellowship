@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './styles/Table.css';
+
 
 class Table extends React.Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class Table extends React.Component {
       <div>
         <table width="800">
           <tbody>
-            <tr>
+            <tr className="table-header">
               <td>Investments</td>
               <td>Asset</td>
               <td>Investment Date</td>
@@ -33,7 +35,7 @@ class Table extends React.Component {
             </tr>
           </tbody>
           {investments.map(inv => (
-            <tbody key={inv.id}>
+            <tbody key={inv.id} className="table-body">
               <tr>
                 <td>
                   {inv.name}
@@ -71,10 +73,12 @@ class Table extends React.Component {
             </tbody>
           ))}
         </table>
+        <br/>
+        <br/>
         {display ? (
-          <button onClick={this.displayButton}>Collapse All</button>
+          <button className="display-button" onClick={this.displayButton}>Collapse All</button>
         ) : (
-          <button onClick={this.displayButton}>Show All</button>
+          <button className="display-button" onClick={this.displayButton}>Show All</button>
         )}
       </div>
     );
