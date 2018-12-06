@@ -1,12 +1,12 @@
 # Schedule of Investments
 
 ## Install node packages
-npm install
+Npm install
 
 ## Start webpack and compile bundle file
-npm run react-dev
+Npm run react-dev
 
 ## Start server
-npm start
+Npm start
 
 View web application on http://localhost:3000
