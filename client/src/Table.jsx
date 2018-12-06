@@ -4,12 +4,21 @@ class Table extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      display: true
     };
+    this.displayButton = this.displayButton.bind(this);
   }
 
+  displayButton() {
+    const { display } = this.state;
+    this.setState({
+      display: !display,
+    });
+  }
+
+
   render() {
-    const isShown = true;
+    const { display } = this.state;
     const { investments } = this.props;
     return (
       <div>
@@ -34,7 +43,7 @@ class Table extends React.Component {
                 <td>{inv.quantity}</td>
                 <td>${inv.cost.$}</td>
               </tr>
-              {isShown &&
+              {display &&
                 <tr>
                   <td></td>
                   <td>
@@ -62,6 +71,11 @@ class Table extends React.Component {
             </tbody>
           ))}
         </table>
+        {display ? (
+          <button onClick={this.displayButton}>Collapse All</button>
+        ) : (
+          <button onClick={this.displayButton}>Show All</button>
+        )}
       </div>
     );
   }

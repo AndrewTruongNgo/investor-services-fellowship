@@ -24,6 +24,7 @@ class App extends React.Component {
     const { data } = this.state;
     return (
       <div>
+        <h2>Krakatoa Ventures Fund I, L.P.</h2>
         <Table investments={data} />
       </div>
     );
