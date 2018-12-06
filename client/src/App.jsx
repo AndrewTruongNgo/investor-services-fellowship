@@ -49,9 +49,9 @@ class App extends React.Component {
     return (
       <div>
         <h2 id="title">Krakatoa Ventures Fund I, L.P.</h2>
-        <Table investments={data} />
         <input id="date-input" onChange={this.inputDate} placeholder="MM/DD/YYYY"></input>
         <button id="date-btn" onClick={this.dateClick}>Submit</button>
+        <Table investments={data} />
       </div>
     );
   }
