@@ -1,4 +1,4 @@
-# investor-services-fellowship
+# Schedule of Investments
 
 ## Install node packages
 npm install
@@ -9,4 +9,4 @@ npm run react-dev
 ## Start server
 npm start
 
-To view web application visit localhost:3000
+View web application on http://localhost:3000
